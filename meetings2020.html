@@ -1,131 +1,245 @@
-git config user.name --global "eric.weiss"
-git config user.email --global "eric.weiss@winchendon.com"
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Patowmack Divers Home Page</title>
+    <meta name="keywords" content="scuba diving Patowmack Divers Virginia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/ico" href="./favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      <!--  https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file -->
+      $(function () {
+        var includes = $("[data-include]");
+        $.each(includes, function () {
+          var file = $(this).data("include") + ".html";
+          $(this).load(file);
+        });
+      });
+    </script>
 
-git init
-git add --all
-git commit -a -m "comment" # commit without staging (add)
-git remote add origin https://github.com/Patowmack/Divers.git
-git branch -M main
-git push -u origin main
-git push --set-upstream origin main
-git remote add origin https://github.com/Patowmack/Divers.git
-git push origin
+    <style>
+      p {
+        text-indent: 10px;
+      }
 
-git config --global user.name "Patowmack"
-git config --global user.email "diving@patowmackdivers.com"
-git remote -v
-git init
-git add .
-git commit -m "message"
+      .dropdown-menu {
+        background-color: #6699ff;
+        border: 1px solid #d9534f;
+      }
+    </style>
+  </head>
 
-gh login auth
-gh repo create PDC --public 
-OR
-gh repo create --source=. --public
-git remote remove origin
-git remote add origin <url>
-OR
+  <body class="bg-info">
+    <!--   <div data-include="body"></div>
+<div data-include="navsite"></div> -->
 
-git remote add origin https://github.com/Patowmack/public_html.git
-git branch -M main
-git push -u origin main
+    <div id="content"></div>
 
-mvim .gitignore
-touch .nojekyll
+    <script>
+      fetch("./headermenu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("content").innerHTML = data;
+        });
+    </script>
 
-Note: GoDaddy has the mvpq.org and winchendon.com domains
+    <div class="container-fluid">
+      <div class="row mx-4">
+        <!-- MEETINGS -->
+        <h4 class="text-center">2020 Meetings</h4>
+        <h6>Wednesday, November 4</h6>
+        Ben Scheelk with the Ocean Foundation will talk and show pictures of
+        their Sea Grass Grow program. The SeaGrass Grow campaign is a carbon
+        offset program that allows people to purchase carbon offset credits that
+        funds seagrass planting. Seagrass habitats are up to 45 times more
+        effective than the most pristine Amazonian rainforest in their carbon
+        uptake abilities and provide protection and shelter to ocean habitat.
+        For every $1 invested in coastal restoration projects, $15 in net
+        economic benefits is created. By utilizing this unique carbon offset
+        program, The Ocean Foundation has been able to combat ocean
+        acidification, a result of carbon produced climate change, as well as
+        help restore ocean habitat, and support the local communities that
+        depend on ocean health.
+        <table align="center">
+          <tr>
+            <td align="center">
+              <img src="./images/2020/IMG_9209.JPG" width="20%" />
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <p class="text-center">
+                Photo Credit: Ben Scheelk, Ocean Foundation
+              </p>
+            </td>
+          </tr>
+        </table>
 
-https://patowmack.github.io/public/
+        <h6>Wednesday, October 7</h6>
+        <p>
+          Club business will start at 7:30, afterwards Marc will present "Life
+          Aboard the Titanic” Once heralded as the grand, unsinkable ocean liner
+          of the sea in 1912, the RMS Titanic sailed into legend after striking
+          an iceberg and disappearing into oblivion, more than two miles on the
+          ocean floor. Seventy-three years later, scientists discovered the dead
+          wreck only to uncover a hidden ecosystem of sea life, from finless
+          fish to wood-boring organisms. Board the RMS Titanic once again to
+          discover the unique lifeforms that have inhabited the legendary ocean
+          liner for more than century.
+        </p>
+        <table align="center">
+          <tr>
+            <td align="center">
+              <img src="./images/2020/Titanic image.jpg" width="20%" />
+            </td>
+          </tr>
+          <tr>
+            <td align="center">(C) National Geographic, 2012</td>
+          </tr>
+        </table>
 
+        <h6>
+          Wednesday, September 2 at Virtual Happy Hour at 7:00 pm, Virtual
+          Meeting at 7:30 pm
+        </h6>
+        <p>
+          Club business will start at 7:30 afterwards Mike will give us the
+          scoop on diving at Lake Phoenix, which used to be called Lake
+          Rawlings.
+        </p>
 
+        <h6>
+          Wednesday, August 5 at Virtual Happy Hour at 7:00 pm, Virtual Meeting
+          at 7:30 pm
+        </h6>
+        <p>
+          Club business will start at 7:30 afterwards Jason Frohnmayer will
+          present NOAA’s involvement with Marine Protected Areas.
+        </p>
 
-# NEW Notes to create web site on GitHub
-/Library/WebServer/Documents/PatowmackDivers/public_html
-git init
-git add --all
-git commit -a -m "comment" # commit without staging (add)
+        <h6>
+          Wednesday, July 1 at Virtual Happy Hour at 7:00 pm, Virtual Meeting at
+          7:30 pm
+        </h6>
+        <p>
+          Sarah will present information to us about the
+          <a href="https://oceanfdn.org/projects/seagrass-grow/"
+            >Ocean Foundation’s SeaGrass Grow</a
+          >
+          program. Next, we will watch some some
+          <a href="https://www.youtube.com/channel/UCNGhhtOKT7OaRYJw2Pfs3zg"
+            >diving videos</a
+          >
+          produced by WK, a fellow diver that club members met on the trip to
+          the Solomon’s last November.
+        </p>
 
-TO DELETE GITHUB REPOSITORY GO TO GITHUB CLICK ON SETTINGS AT BOTTOM YOU CAN DELETE THE REPOSITORY
-NOW GO TO GitHub CREATE NEW REPOSITORY. IN THIS CASE PatowmackDivers
+        <h6>Wednesday, June 6</h6>
+        <p>
+          Liz will present pictures from her recent dive trip to Turneffe Island
+          in Belize. Gloria has some whale pictures from Tahiti.
+        </p>
+        <table align="center">
+          <tr align="center">
+            <td align="center">
+              <img src="./images/2020/resort.jpg" width="40%" />
+            </td>
+            <td align="center">
+              <img src="./images/2020/whales.jpg" width="40%" />
+            </td>
+          </tr>
+        </table>
 
-BACK AT LOCAL TERMINAL FOLLOW INSTRUCTIONS ON GitHUB:
-git remote add origin https://github.com/Patowmack/PatowmackDivers.git
-git branch -M main
-git push -u origin main
+        <h6>Wednesday, May 6</h6>
+        <p>
+          Paul, Bruce B. and Ed will give a report and show pictures from their
+          pre-stay-at-home/pre-social-distancing trip to the Blue Heron Bridge
+          at Riviera Beach, Florida. We will have an update on the closure
+          status of Phil Foster Park.
+        </p>
+        <table align="center">
+          <tr>
+            <td align="center">
+              <img src="./images/2020/BHB/baby surgeon.jpg" width="80%" />
+            </td>
+            <td align="center">
+              <img src="./images/2020/BHB/moray.jpg" width="80%" />
+            </td>
+            <td align="center">
+              <img src="./images/2020/BHB/puffer.jpg" width="80%" />
+            </td>
+            <td align="center">
+              <img src="./images/2020/BHB/ray.jpg" width="80%" />
+            </td>
+          </tr>
+        </table>
 
-#EITHER
-#git remote add origin https://github.com/Patowmack/PatowmackDivers.git
-#OR
+        <h6>Wednesday, April 1 at 7:30 pm</h6>
+        <p>
+          This is a chance for members who cannot drive to our meeting to join
+          us from home.
+        </p>
 
+        <h6>Wednesday, March 4 at 7:30 pm</h6>
+        Bill and Nadine Beard from
+        <a href="https://www.billbeardcostarica.com"
+          >Bill Beard’s Costa Rica Scuba Diving & Adventure Travel Company</a
+        >
+        will talk about sustainable diving and adventure tourism in Costa Rica.
+        Bill was the first scuba diving instructor in the country, had the first
+        professional dive shop and dive boat offering daily dive trips in the
+        Pacific Ocean.
 
-#git remote set-url origin https://github.com/Patowmack/PatowmackDivers
+        <h6>Wednesday, February 5 at 7:30 pm</h6>
+        Kris, Paul, and Sarah will show pictures from their live aboard dive
+        trip to the Solomon Islands.
+        <table align="center">
+          <tr>
+            <td align="center">
+              ><img src="./images/2020/SolomonsGroup.jpg" width="25%" />
+            </td>
+          </tr>
+        </table>
 
-#git remote -v
-#git push -u origin main
-
-THIS COULD TAKE A WHILE
-
-
-Settings | Pages | Static HTML | Commit Changes
-
-== NEXT STEP IS TO HYPERLINK OTHER PAGES
-== MY CURRENT ISSUE IS A LEADING /
-
-
-SUMMARY
-update html
-git add .
-git commit -m "comments"
-git push
-
-on GitHub
-Settings | Pages | Unpublish site 
-GitHub Actions | Static HTML | Configure
-
-
-NEXT:
-
-Yes, you can create a web page with 2 columns of different sizes using Bootstrap's grid system. Bootstrap's grid is based on a 12-column layout, allowing you to create columns of varying widths. Here's how you can achieve this:
-
-1. Use the container class to wrap your content:
-
-```html
-<div class="container">
-  <div class="row">
-    <!-- Columns go here -->
-  </div>
-</div>
-```
-
-2. Create two columns with different sizes using the col-* classes:
-
-```html
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <!-- Larger column content -->
+        <h6>Wednesday, January 8 at 7:30 pm</h6>
+        Andrew will share his experiences diving with a rebreather. He will
+        bring his current rebreather and show pictures.
+      </div>
     </div>
-    <div class="col-md-4">
-      <!-- Smaller column content -->
+
+    <div class="container" style="height: 50px">
+      <img src="./images/_DSC4449.jpg" class="h-50 w-100" alt="..." />
     </div>
-  </div>
-</div>
-```
+    <p class="text-center">
+      <a href="http://www.facebook.com/PatowmackDivers"
+        ><img
+          src="./images/f_logo.jpg"
+          style="border: none"
+          height="25"
+        />Follow us on Facebook!</a
+      >
+      or email us at "dive at patowmackdivers.com" replace <i> at </i> with @
+    </p>
 
-In this example, the first column takes up 8 out of 12 grid units (col-md-8), while the second column takes up 4 out of 12 grid units (col-md-4)[1][2]. This creates a layout where one column is twice the size of the other.
+    <p class="text-center">
+      Copyright (c) 2011-2023 Patowmack Divers.com. All rights reserved.
+    </p>
 
-You can adjust these numbers to create different proportions, as long as they add up to 12. For example, you could use col-md-9 and col-md-3 for a 75%/25% split[5].
-
-The 'md' in the class names refers to the medium breakpoint, meaning this layout will apply to screens wider than the medium breakpoint. For smaller screens, the columns will stack vertically by default, ensuring responsiveness[2][6].
-
-Remember, Bootstrap's grid system is flexible and responsive, allowing you to create layouts that adapt to different screen sizes[7].
-
-Citations:
-[1] https://www.geeksforgeeks.org/how-to-create-a-basic-two-column-layout-using-bootstrap-5/
-[2] https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php
-[3] https://www.w3schools.com/howto/howto_css_two_columns.asp
-[4] https://react-bootstrap.netlify.app/docs/layout/grid/
-[5] https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
-[6] https://mdbootstrap.com/docs/standard/layout/grid/
-[7] https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
